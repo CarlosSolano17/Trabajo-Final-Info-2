@@ -1,3 +1,5 @@
+import typing
+from PyQt5 import QtCore
 from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox, QFileDialog,QSlider,QVBoxLayout,QLabel,QWidget
 
@@ -55,11 +57,64 @@ class Vista2(QDialog):
         self.setup()
 
     def setup(self):
-        #se programa la senal para el boton
         self.BotonSalir.clicked.connect(self.accionSalir)
+        self.mat.clicked.connect(self.abrirVistaMat)
+        self.dicom.clicked.connect(self.abrirVistaDicom)
 
     def asignarControlador(self,c):
         self.__controlador = c
+
+    def accionSalir(self):
+        self.hide()
+        self.__ventanaPadre.show()
+
+    def abrirVistaMat(self):
+        ventana_ingreso=VistaMat(self)
+        ventana_ingreso.asignarControlador(self.__controlador)
+        self.hide()
+        ventana_ingreso.show()
+
+    def abrirVistaDicom(self):
+        ventana_ingreso=VistaDicom(self)
+        ventana_ingreso.asignarControlador(self.__controlador)
+        self.hide()
+        ventana_ingreso.show()
+
+class VistaMat(QDialog):
+    def __init__(self, ppal=None):
+        super().__init__(ppal)
+        loadUi("VistaMat.ui",self)
+        self.__ventanaPadre = ppal
+        self.__resultado_lista = []
+        self.setup()
+
+
+    def asignarControlador(self,c):
+        self.__controlador = c
+
+    def setup(self):
+        #se programa la senal para el boton
+        self.ventana_principal.clicked.connect(self.accionSalir)
+
+    def accionSalir(self):
+        self.hide()
+        self.__ventanaPadre.show()
+    
+
+class VistaDicom(QDialog):
+    def __init__(self, ppal=None):
+        super().__init__(ppal)
+        loadUi("VistaDicom.ui",self)
+        self.__ventanaPadre = ppal
+        #self.__resultado_lista = []
+        self.setup()
+
+    def asignarControlador(self,c):
+        self.__controlador = c
+
+    def setup(self):
+        #se programa la senal para el boton
+        self.BotonSalir.clicked.connect(self.accionSalir)
 
     def accionSalir(self):
         self.hide()

@@ -23,6 +23,7 @@ class Principal(object):
         #hacemos enlaces entre las partes
         self.__mi_coordinador = Coordinador(self.__mi_vista, self.__mi_sistema)
         self.__mi_vista.asignarControlador(self.__mi_coordinador)
+       
         
     def main(self):
         self.__mi_vista.show()
