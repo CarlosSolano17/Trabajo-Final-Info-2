@@ -38,10 +38,29 @@ class VentanaPrincipal(QMainWindow):
             self.campo_usuario.clear()
             self.campo_password.clear()
         
-    # def abrirVista2(self):
-    #     self.campo_usuario.clear()
-    #     self.campo_password.clear()
-    #     ventana_ingreso=Vista2(self)
-    #     ventana_ingreso.asignarControlador(self.__controlador)
-    #     self.hide()
-    #     ventana_ingreso.show()
+    def abrirVista2(self):
+        self.campo_usuario.clear()
+        self.campo_password.clear()
+        ventana_ingreso=Vista2(self)
+        ventana_ingreso.asignarControlador(self.__controlador)
+        self.hide()
+        ventana_ingreso.show()
+
+class Vista2(QDialog):
+    def __init__(self, ppal=None):
+        super().__init__(ppal)
+        loadUi("Vista2.ui",self)
+        self.__ventanaPadre = ppal
+        self.__resultado_lista = []
+        self.setup()
+
+    def setup(self):
+        #se programa la senal para el boton
+        self.BotonSalir.clicked.connect(self.accionSalir)
+
+    def asignarControlador(self,c):
+        self.__controlador = c
+
+    def accionSalir(self):
+        self.hide()
+        self.__ventanaPadre.show()
