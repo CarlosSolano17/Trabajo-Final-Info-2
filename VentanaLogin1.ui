@@ -34,7 +34,7 @@ background-color: rgb(234, 233, 246);</string>
      <property name="geometry">
       <rect>
        <x>100</x>
-       <y>110</y>
+       <y>130</y>
        <width>241</width>
        <height>31</height>
       </rect>
@@ -67,13 +67,13 @@ background-color: rgb(234, 233, 246);</string>
      </property>
      <property name="font">
       <font>
+       <pointsize>10</pointsize>
        <italic>false</italic>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLineEdit {
-background-color: rgb(255, 255, 255);
-border -radius:40px }</string>
+      <string notr="true">background-color: rgb(255, 255, 255);border-radius: 10px;</string>
      </property>
      <property name="text">
       <string/>
@@ -93,11 +93,13 @@ border -radius:40px }</string>
      </property>
      <property name="font">
       <font>
+       <pointsize>10</pointsize>
        <italic>false</italic>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(255, 255, 255);border-radius: 10px;</string>
      </property>
      <property name="text">
       <string/>
@@ -112,20 +114,21 @@ border -radius:40px }</string>
     <widget class="QPushButton" name="boton_ingresar">
      <property name="geometry">
       <rect>
-       <x>170</x>
+       <x>150</x>
        <y>350</y>
-       <width>91</width>
+       <width>141</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <italic>true</italic>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(255, 255, 255);border-radius: 10px;</string>
      </property>
      <property name="text">
       <string notr="true">Ingresar</string>

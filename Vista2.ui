@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>582</width>
-    <height>425</height>
+    <width>640</width>
+    <height>522</height>
    </rect>
   </property>
   <property name="font">
@@ -24,8 +24,8 @@
   <widget class="QPushButton" name="mat">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>180</y>
+     <x>110</x>
+     <y>230</y>
      <width>181</width>
      <height>51</height>
     </rect>
@@ -33,10 +33,11 @@
    <property name="font">
     <font>
      <pointsize>10</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(222, 243, 250);</string>
+    <string notr="true">background-color: rgb(222, 243, 250);border-radius: 10px;</string>
    </property>
    <property name="text">
     <string>Archivos Mat </string>
@@ -45,8 +46,8 @@
   <widget class="QPushButton" name="dicom">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>180</y>
+     <x>340</x>
+     <y>230</y>
      <width>181</width>
      <height>51</height>
     </rect>
@@ -54,11 +55,12 @@
    <property name="font">
     <font>
      <pointsize>10</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(244, 251, 252);
-background-color: rgb(234, 245, 249);</string>
+    <string notr="true">border-radius: 10px;
+background-color: rgb(222, 243, 250);</string>
    </property>
    <property name="text">
     <string>Archivos Dicom</string>
@@ -67,19 +69,20 @@ background-color: rgb(234, 245, 249);</string>
   <widget class="QPushButton" name="BotonSalir">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>270</y>
-     <width>91</width>
-     <height>31</height>
+     <x>420</x>
+     <y>310</y>
+     <width>101</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <pointsize>10</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(213, 206, 248);</string>
+    <string notr="true">background-color: rgb(213, 206, 248);border-radius: 10px;</string>
    </property>
    <property name="text">
     <string>Salir </string>
@@ -88,8 +91,8 @@ background-color: rgb(234, 245, 249);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>100</y>
+     <x>160</x>
+     <y>150</y>
      <width>301</width>
      <height>61</height>
     </rect>
@@ -101,42 +104,42 @@ background-color: rgb(234, 245, 249);</string>
     </font>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#9933ff;&quot;&gt;Archivos a visualizar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>10</y>
-     <width>551</width>
-     <height>91</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>imagen4.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Archivos a visualizar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>310</y>
-     <width>551</width>
-     <height>91</height>
+     <x>0</x>
+     <y>380</y>
+     <width>631</width>
+     <height>141</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>imagen4.png</pixmap>
+    <pixmap>../6.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>631</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../6.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
