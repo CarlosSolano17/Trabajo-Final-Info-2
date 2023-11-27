@@ -1,4 +1,6 @@
 import numpy as np
+import cv2
+import pydicom as dc
 
 class Servicio(object):
     def __init__(self,data = None):
@@ -76,3 +78,13 @@ class Servicio(object):
         l=[]
         l.append(self.pruebas)
         return l
+
+    def Suavisado(self, kernel_size):
+        x = self.__dicom.pixel_array
+        smoothed_image = cv2.GaussianBlur(x, (kernel_size, kernel_size), 0)
+        return  smoothed_image
+    
+    def Abrir_dicom(self,i):
+        self.__dicom = dc.dcmread(i)
+        x = self.__dicom.pixel_array
+        return x

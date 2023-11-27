@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1540</width>
-    <height>898</height>
+    <width>1174</width>
+    <height>673</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,289 +19,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>10</y>
-     <width>711</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>15</pointsize>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(224, 226, 239);</string>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Información de la Imagen &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>100</y>
-     <width>371</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>9</pointsize>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(232, 247, 242);</string>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nombre del paciente :&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>160</y>
-     <width>371</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>9</pointsize>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(232, 247, 242);</string>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Identificación del paciente:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>220</y>
-     <width>371</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>9</pointsize>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(232, 247, 242);</string>
-   </property>
-   <property name="text">
-    <string>Parte del Cuerpo examinada:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>280</y>
-     <width>371</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>9</pointsize>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(232, 247, 242);</string>
-   </property>
-   <property name="text">
-    <string>Descripción del estudio:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>340</y>
-     <width>371</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>9</pointsize>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(232, 247, 242);</string>
-   </property>
-   <property name="text">
-    <string>Fecha del estudio:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="nombre">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>100</y>
-     <width>341</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(224, 226, 239);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="id">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>160</y>
-     <width>341</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(224, 226, 239);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="fecha">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>340</y>
-     <width>341</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(224, 226, 239);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="estudio">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>280</y>
-     <width>341</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(224, 226, 239);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="partecuerpo">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>220</y>
-     <width>341</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(224, 226, 239);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="cargar">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>410</y>
-     <width>231</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(232, 247, 242);</string>
-   </property>
-   <property name="text">
-    <string>Cargar Carpeta </string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BotonSalir">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>410</y>
-     <width>231</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(232, 247, 242);</string>
-   </property>
-   <property name="text">
-    <string>Salir</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_13">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>530</y>
-     <width>541</width>
-     <height>361</height>
+     <x>790</x>
+     <y>450</y>
+     <width>361</width>
+     <height>201</height>
     </rect>
    </property>
    <property name="text">
@@ -314,62 +35,130 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QSlider" name="slider">
+  <widget class="QPushButton" name="cargar">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>780</y>
-     <width>611</width>
-     <height>81</height>
+     <x>830</x>
+     <y>130</y>
+     <width>271</width>
+     <height>41</height>
     </rect>
    </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
    </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>980</x>
-     <y>0</y>
-     <width>411</width>
-     <height>251</height>
-    </rect>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(227, 209, 241);border-radius: 10px;</string>
    </property>
    <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>imagen3.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
+    <string>Cargar Carpeta</string>
    </property>
   </widget>
-  <widget class="QLabel" name="nums">
+  <widget class="QPushButton" name="BotonSalir">
    <property name="geometry">
     <rect>
-     <x>780</x>
-     <y>810</y>
-     <width>49</width>
-     <height>16</height>
+     <x>830</x>
+     <y>370</y>
+     <width>271</width>
+     <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 225, 149);border-radius: 10px;</string>
+   </property>
    <property name="text">
-    <string/>
+    <string>Ventana Principal</string>
    </property>
   </widget>
-  <widget class="QLabel" name="img">
+  <widget class="QSpinBox" name="spinBox">
    <property name="geometry">
     <rect>
-     <x>860</x>
-     <y>280</y>
-     <width>641</width>
-     <height>471</height>
+     <x>950</x>
+     <y>300</y>
+     <width>51</width>
+     <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="AplicarS">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>220</y>
+     <width>271</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(222, 241, 255); border-radius: 10px;</string>
+   </property>
    <property name="text">
-    <string/>
+    <string>Aplicar Suavizado</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="contenedor" native="true">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>70</y>
+     <width>731</width>
+     <height>461</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>40</y>
+      <width>621</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="img"/>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="limpiar">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>570</y>
+     <width>271</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 10px;
+background-color: rgb(255, 220, 252);</string>
+   </property>
+   <property name="text">
+    <string>Limpiar Grafico</string>
    </property>
   </widget>
  </widget>

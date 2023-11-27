@@ -1,7 +1,7 @@
 import typing
-from PyQt5 import QtCore
+from PyQt5 import QtCore, QtWidgets
 from PyQt5.uic import loadUi
-from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox, QFileDialog,QVBoxLayout,QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox, QFileDialog,QVBoxLayout, QWidget
 import scipy.io as sio
 from matplotlib.figure import Figure
 from numpy import arange, sin, pi
@@ -100,7 +100,6 @@ class MyGraphCanvas(FigureCanvas):
         self.axes.set_ylabel('Eje Y')
         self.draw()
 
-
 class VistaMat(QDialog):
     def __init__(self, ppal=None):
         super().__init__(ppal)
@@ -135,8 +134,8 @@ class VistaMat(QDialog):
         self.__ventanaPadre.show()
 
     def cargar(self):
-        archivo_cargado, _ = QFileDialog.getOpenFileName(self, "Abrir señal","","Todos los archivos (*);;Archivos mat (*.mat);;Python (*.py)")
-        
+        archivo_cargado, _ = QFileDialog.getOpenFileName(self, "Open .mat file", "", "MAT Files (*.mat)")
+
         if archivo_cargado != '':
             #Cargamos los datos
             data = sio.loadmat(archivo_cargado) # Diccionario
@@ -208,6 +207,25 @@ class VistaMat(QDialog):
             texto=("No se puede retroceder más")
             msj=QMessageBox.warning(self, "Alerta", texto,  QMessageBox.Ok, QMessageBox.Cancel) 
 
+class MyGraphCanvas2(FigureCanvas):
+    #constructor
+    def __init__(self, parent= None,width=32, height=30, dpi=100):
+        self.fig = Figure(figsize=(width, height), dpi=dpi)
+        self.axes = self.fig.add_subplot(111)
+        self.axes.axis("off")        
+        FigureCanvas.__init__(self,self.fig)
+    
+    def graficar_imagen(self, datos):
+        self.axes.clear()
+        self.axes.axis("off")
+        self.axes.imshow(datos)
+        self.axes.figure.canvas.draw()
+
+    def limpiar(self):
+        self.axes.clear()
+        self.axes.axis("off")
+        self.axes.figure.canvas.draw()
+
 class VistaDicom(QDialog):
     def __init__(self, ppal=None):
         super().__init__(ppal)
@@ -220,9 +238,38 @@ class VistaDicom(QDialog):
 
     def setup(self):
         self.BotonSalir.clicked.connect(self.accionSalir)
+        self.cargar.clicked.connect(self.cargarSenal)
+        self.AplicarS.clicked.connect(self.Suavizado)
+        self.limpiar.clicked.connect(self.grafico_limpio)
+        self.spinBox.setSingleStep(2) 
+        self.spinBox.valueChanged.connect(self.onSpinBoxValueChanged)
+        
+        self.graf = MyGraphCanvas2(self, width=8, height=5, dpi=100)
+        self.img = QVBoxLayout()
+        self.img.setAlignment(QtCore.Qt.AlignTop | QtCore.Qt.AlignLeft)
+        self.img.addWidget(self.graf)
+        self.setLayout(self.img)
 
     def accionSalir(self):
         self.hide()
         self.__ventanaPadre.show()
 
+    def onSpinBoxValueChanged(self, value):
+        if value % 2 == 0:  
+            value += 1 
+            self.spinBox.setValue(value)
+
+    def Suavizado(self):
+        x = self.spinBox.value()
+        y = self.__controlador.Suave(x)
+        self.graf.graficar_imagen(y)
     
+    def cargarSenal(self):
+        file, _  = QtWidgets.QFileDialog.getOpenFileName(self,"Open file","/home","DICOM Files (*.dcm)")
+        if file != '':
+            y= self.__controlador.cargar_senal_desde_carpeta(file)
+            self.graf.graficar_imagen(y)
+        else:
+            pass
+    def grafico_limpio(self):
+        self.graf.limpiar()

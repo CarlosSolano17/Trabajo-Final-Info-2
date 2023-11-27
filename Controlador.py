@@ -38,6 +38,12 @@ class Coordinador(object):
     def lista_data(self):
         return self.__mi_sistema.lista()
     
+    def cargar_senal_desde_carpeta(self,i):
+        return self.__mi_sistema.Abrir_dicom(i)
+    
+    def Suave(self,i):
+        return self.__mi_sistema.Suavisado(i)
+    
 class Principal(object):
     def __init__(self):
         self.__app = QApplication(sys.argv)
