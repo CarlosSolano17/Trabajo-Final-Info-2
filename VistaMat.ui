@@ -6,24 +6,38 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>887</width>
-    <height>560</height>
+    <width>903</width>
+    <height>686</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 255, 255);</string>
+   <string notr="true">background-color: rgb(255, 255, 255);border-radius: 10px</string>
   </property>
   <widget class="QPushButton" name="ventana_principal">
    <property name="geometry">
     <rect>
-     <x>710</x>
+     <x>640</x>
      <y>490</y>
-     <width>131</width>
-     <height>21</height>
+     <width>201</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(244, 211, 139);</string>
    </property>
    <property name="text">
     <string>Ventana Principal</string>
@@ -33,10 +47,19 @@
    <property name="geometry">
     <rect>
      <x>640</x>
-     <y>250</y>
+     <y>220</y>
      <width>201</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(229, 184, 228);</string>
    </property>
    <property name="text">
     <string>Señal Original </string>
@@ -46,10 +69,19 @@
    <property name="geometry">
     <rect>
      <x>640</x>
-     <y>280</y>
+     <y>270</y>
      <width>201</width>
-     <height>24</height>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(229, 184, 228);</string>
    </property>
    <property name="text">
     <string>Señal Promedio</string>
@@ -61,8 +93,17 @@
      <x>640</x>
      <y>320</y>
      <width>201</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(229, 184, 228);</string>
    </property>
    <property name="text">
     <string>Señal Reshape</string>
@@ -72,23 +113,44 @@
    <property name="geometry">
     <rect>
      <x>640</x>
-     <y>360</y>
+     <y>370</y>
      <width>201</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(229, 184, 228);</string>
    </property>
    <property name="text">
     <string>Señal con Filtrado</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="anterior_prueba">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>430</y>
-     <width>131</width>
-     <height>21</height>
+     <x>20</x>
+     <y>490</y>
+     <width>151</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(206, 193, 239);</string>
    </property>
    <property name="text">
     <string>Prueba Anterior</string>
@@ -97,23 +159,59 @@
   <widget class="QPushButton" name="siguiente_prueba">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>430</y>
-     <width>131</width>
-     <height>21</height>
+     <x>200</x>
+     <y>490</y>
+     <width>161</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+     <underline>false</underline>
+     <strikeout>false</strikeout>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(211, 185, 241);
+background-color: rgb(206, 193, 239);</string>
    </property>
    <property name="text">
     <string>Prueba Siguiente </string>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeatDelay">
+    <number>292</number>
+   </property>
+   <property name="autoDefault">
+    <bool>true</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>50</y>
-     <width>541</width>
-     <height>351</height>
+     <x>20</x>
+     <y>40</y>
+     <width>571</width>
+     <height>431</height>
     </rect>
    </property>
   </widget>
@@ -121,13 +219,59 @@
    <property name="geometry">
     <rect>
      <x>640</x>
-     <y>150</y>
+     <y>100</y>
      <width>201</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(176, 208, 251);</string>
    </property>
    <property name="text">
     <string>Cargar Señal </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>570</y>
+     <width>831</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>imagen3.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>160</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:700; color:#d178c4;&quot;&gt;Funciones&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>

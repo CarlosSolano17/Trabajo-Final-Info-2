@@ -1,16 +1,19 @@
-#import os 
-#from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox, QFileDialog,QSlider,QVBoxLayout,QLabel,QWidget
-#import pydicom
-#from PyQt5.QtGui import QImage, QPixmap
-#import matplotlib.pyplot as plt
-#import numpy as np
+import numpy as np
 
 class Servicio(object):
-    def __init__(self):
+    def __init__(self,data = None):
         self.__usuarios = {}
-        #se crea un usuario inicial para arrancar el sistema
+        #Usuario!!
         self.__usuarios['123'] = 'Carlos'
         self.__rutas = []
+
+        if data is not None:
+            self.asignarDatos(data)
+        else:
+            self.data = []
+            self.sensores = 0
+            self.pruebas = 0
+            self.etapas = 0
     
     def verificarUsuario(self, u, c):
         try:
@@ -21,3 +24,55 @@ class Servicio(object):
                 return False
         except: #si la clave no existe se genera KeyError
             return False
+        
+    def asignarDatos(self,data):
+        self.data = data
+        self.sensores = data.shape[0]
+        self.etapas = data.shape[1]
+        self.pruebas = data.shape[2]
+
+    def devolverOriginal(self):
+        return self.data[:,:,0]
+    
+    def senalprom(self):
+        data = self.data
+        x = np.mean(data,0)
+        y = np.transpose(x)        
+        return y
+    
+    def senal_reshape(self):
+        data=self.data
+        reshape=np.reshape(data,(self.sensores,self.etapas*self.pruebas),order = 'F') # Conveirte de 3D a 2D
+        return reshape
+    
+    def senalfiltra(self):
+        set=self.data[4,:,5]
+        w=(5)
+        b=np.zeros((1,202))
+        for i in range(0,len(set)):
+            valor=set[i]
+            if valor >= w/2:
+                b[0,i]=w/2
+            elif valor< w/2 and valor > -w/3:
+                b[0,i]=valor
+            elif valor <= -w/3:
+                b[0,i]=-w/3     
+        return b 
+    
+    def senalfiltrado(self):
+        set=self.data[4,:,5]  
+        return set
+    
+    def devolversig(self,i):
+        if i < self.data.shape[2]:
+            return self.data[:,:,i]
+        else:
+            return None
+            
+    def devolveratras(self,i):
+        return self.data[:,:,i]
+    
+    def lista(self):
+        l=[]
+        l.append(self.pruebas)
+        return l
